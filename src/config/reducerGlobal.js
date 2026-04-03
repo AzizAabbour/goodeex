@@ -4,26 +4,26 @@ const initialState = {
   activities: []
 };
 
-const reducerGlobal = (state = initialState , action) =>{
-    switch(action.type){
-        case 'SET_DMR':
-            return {
-                ...state,
-                bmr: action.payload
-            };
-            case 'SET_ACTIVITIES_LEVELS':
-                return {
-                    ...state,
-                    activities: action.payload
-                };
-            case "SET_TDEE":
-                return {
-                    ...state,
-                    tdee :  action.payload
-                }
-        default:
-            return state;
-    }
+const reducerGlobal = (state = initialState, action) => {
+  switch (action.type) {
+    case "SET_BMR":
+      return {
+        ...state,
+        bmr: action.payload,
+      };
+    case "SET_ACTIVITIES_LEVELS":
+      return {
+        ...state,
+        activities: action.payload,
+      };
+    case "SET_TDEE":
+      return {
+        ...state,
+        tdee: action.payload,
+      };
+    default:
+      return state;
+  }
 };
 
 
